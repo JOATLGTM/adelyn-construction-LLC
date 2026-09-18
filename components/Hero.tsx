@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowRightIcon, CheckIcon, PhoneIcon } from "@/components/Icons";
 import { site } from "@/lib/site";
@@ -86,6 +85,13 @@ export function Hero() {
           <motion.div {...fadeUp(0.85)} className="mt-8 flex flex-wrap gap-4">
             <a
               href={site.phoneHref}
+              className="btn btn-outline h-auto gap-3 rounded-lg border-2 border-white px-6 py-3 font-display text-xl font-bold tracking-wide text-white hover:border-primary hover:bg-primary hover:text-primary-content"
+            >
+              GET A FREE ESTIMATE
+              <ArrowRightIcon className="size-6" />
+            </a>
+            <a
+              href={site.phoneHref}
               className="btn btn-primary h-auto gap-3 rounded-lg px-6 py-3 shadow-lg shadow-primary/30"
             >
               <PhoneIcon className="size-8" />
@@ -98,13 +104,6 @@ export function Hero() {
                 </span>
               </span>
             </a>
-            <Link
-              href="#contact"
-              className="btn btn-outline h-auto gap-3 rounded-lg border-2 border-white px-6 py-3 font-display text-xl font-bold tracking-wide text-white hover:border-primary hover:bg-primary hover:text-primary-content"
-            >
-              GET A FREE ESTIMATE
-              <ArrowRightIcon className="size-6" />
-            </Link>
           </motion.div>
         </div>
 
