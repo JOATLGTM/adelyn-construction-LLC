@@ -1,9 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRightIcon } from "@/components/Icons";
 import { Reveal } from "@/components/Reveal";
 import { SectionTitle } from "@/components/SectionTitle";
 
@@ -69,16 +67,6 @@ export function Projects() {
             </Reveal>
           ))}
         </ul>
-
-        <Reveal delay={0.2} className="mt-10 text-center">
-          <Link
-            href="#contact"
-            className="btn btn-outline btn-primary rounded-md border-2 px-6 font-display text-lg font-bold tracking-wide"
-          >
-            VIEW MORE PROJECTS
-            <ArrowRightIcon className="size-5" />
-          </Link>
-        </Reveal>
       </div>
     </section>
   );
