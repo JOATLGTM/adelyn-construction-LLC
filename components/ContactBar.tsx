@@ -56,8 +56,12 @@ export function ContactBar() {
             const Icon = item.icon;
             const isError = item.tone === "error";
             return (
-              <Reveal key={item.label} delay={i * 0.1}>
-                <li className="lg:px-6 first:lg:pl-0 last:lg:pr-0">
+              <Reveal
+                key={item.label}
+                delay={i * 0.1}
+                className="lg:px-6 first:lg:pl-0 last:lg:pr-0"
+              >
+                <li>
                   <a
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
