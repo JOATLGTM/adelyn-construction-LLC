@@ -1,5 +1,5 @@
 import type { ComponentType, SVGProps } from "react";
-import { ClockIcon, MailIcon, PhoneIcon, PinIcon } from "@/components/Icons";
+import { ClockIcon, MailIcon, PhoneIcon } from "@/components/Icons";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/lib/site";
 
@@ -36,14 +36,6 @@ const items: Item[] = [
     href: `mailto:${site.email}`,
     tone: "primary",
   },
-  {
-    icon: PinIcon,
-    label: site.address.line1,
-    value: site.address.line2,
-    href: site.address.mapsHref,
-    tone: "primary",
-    external: true,
-  },
 ];
 
 export function ContactBar() {
@@ -51,7 +43,7 @@ export function ContactBar() {
     <section id="contact" className="bg-neutral py-10 text-neutral-content">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="sr-only">Contact {site.name}</h2>
-        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-0 lg:divide-x lg:divide-white/15">
           {items.map((item, i) => {
             const Icon = item.icon;
             const isError = item.tone === "error";
